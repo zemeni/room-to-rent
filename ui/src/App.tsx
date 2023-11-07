@@ -10,12 +10,15 @@ const App = () => {
     const [error, setError] = useState('');
     const [isLoading, setLoading] = useState(false);
 
+    const url1 = 'https://jsonplaceholder.typicode.com/users';
+    const url2 = 'http://localhost:8080/employees';
+
     useEffect(() => {
         const controller = new AbortController();
         setLoading(true);
         const fetchCustomer = async () => {
             try {
-                const res = await axios.get<Employee[]>('http://localhost:8080/employees', {signal: controller.signal})
+                const res = await axios.get<Employee[]>(url1, {signal: controller.signal})
                 console.log(res.data);
                 setEmployees(res.data);
                 setLoading(false);
