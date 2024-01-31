@@ -18,3 +18,16 @@ PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 export JAVA_HOME
 export JRE_HOME
 export PATH
+
+## installing java21 in ubuntu
+wget java21-ubuntu link
+sudo dpkg -i jdk21...deb
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk21../bin/java 1
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk21../bin/javac 1
+
+java --version
+
+sudo vi /etc/environment
+JAVA_HOMe="usr/lib/jvm/jdk .../"
+
+source /etc/environment

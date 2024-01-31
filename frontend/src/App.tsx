@@ -7,7 +7,7 @@ function App() {
   const [welcome, setWelcome] = useState("");
 
     useEffect(() => {
-        const welcomeUrl = "http://localhost:8080/room-to-rent/welcome"
+        const welcomeUrl = "http://13.55.102.73:8080/room-to-rent/welcome"
         axios.get(welcomeUrl).then(function (response: AxiosResponse) {
             setWelcome(response.data);
             console.count(response.data);
