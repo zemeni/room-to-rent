@@ -1,10 +1,19 @@
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import {default as axios} from "axios";
+import {AxiosResponse} from "axios";
 
 function App() {
   const [count, setCount] = useState(0)
+
+    useEffect(() => {
+        const welcomeUrl = "http://localhost:8080/room-to-rent/welcome"
+        axios.get(welcomeUrl).then(function (response: AxiosResponse) {
+            console.count(response.data);
+        })
+    }, []);
 
   return (
     <>
