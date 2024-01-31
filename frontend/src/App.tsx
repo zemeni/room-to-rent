@@ -10,7 +10,7 @@ function App() {
         const welcomeUrl = "http://13.55.102.73:8080/room-to-rent/welcome"
         axios.get(welcomeUrl).then(function (response: AxiosResponse) {
             setWelcome(response.data);
-            console.count(response.data);
+            console.log(response.data);
         })
     }, []);
 
