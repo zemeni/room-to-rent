@@ -1,5 +1,4 @@
 # INSTALLING JAVA-21 in Windows
-<a>https://www.oracle.com/java/technologies/downloads/</a>
 wget https://www.oracle.com/java/technologies/downloads/
 tar -zxvf jdk-21..
 sudo mv jdk-21.. /opt/
