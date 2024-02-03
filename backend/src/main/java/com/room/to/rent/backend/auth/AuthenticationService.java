@@ -2,11 +2,11 @@ package com.room.to.rent.backend.auth;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.room.to.rent.backend.entity.AppUser;
-import com.room.to.rent.backend.user.Role;
 import com.room.to.rent.backend.security.JwtService;
 import com.room.to.rent.backend.token.Token;
 import com.room.to.rent.backend.token.TokenRepository;
 import com.room.to.rent.backend.token.TokenType;
+import com.room.to.rent.backend.user.Role;
 import com.room.to.rent.backend.user.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -14,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -101,7 +102,7 @@ public class AuthenticationService {
         userEmail = jwtService.extractUsername(refreshToken);
         if (userEmail != null) {
             var user = this.repository.findByEmail(userEmail)
-                    .orElseThrow();
+                    .orElseThrow(() -> new UsernameNotFoundException("user not found"));
             if (jwtService.isTokenValid(refreshToken, user)) {
                 var accessToken = jwtService.generateToken(user);
                 revokeAllUserTokens(user);

@@ -13,7 +13,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/room-to-rent")
-//@CrossOrigin(origins = "http://localhost:5173")
 public class TestController {
 
     private final DeveloperService developerService;

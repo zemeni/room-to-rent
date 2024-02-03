@@ -38,14 +38,9 @@ public class AppUser implements UserDetails {
     @OneToMany(mappedBy = "user")
     private List<Token> tokens;
 
-    /*@JsonIgnore
-    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
-    private Set<Authority> authorities;*/
-
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role.name()));
+        return role.getAuthorities();
     }
 
     @Override

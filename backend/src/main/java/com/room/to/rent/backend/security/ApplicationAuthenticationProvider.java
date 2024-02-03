@@ -2,7 +2,6 @@ package com.room.to.rent.backend.security;
 
 import com.room.to.rent.backend.entity.AppUser;
 import com.room.to.rent.backend.entity.Authority;
-import com.room.to.rent.backend.repository.CustomerRepository;
 import com.room.to.rent.backend.user.UserRepository;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -23,12 +22,10 @@ import java.util.Set;
 @Component
 public class ApplicationAuthenticationProvider implements AuthenticationProvider {
 
-    private final CustomerRepository customerRepository;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public ApplicationAuthenticationProvider(CustomerRepository customerRepository, UserRepository userRepository, PasswordEncoder passwordEncoder) {
-        this.customerRepository = customerRepository;
+    public ApplicationAuthenticationProvider(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
