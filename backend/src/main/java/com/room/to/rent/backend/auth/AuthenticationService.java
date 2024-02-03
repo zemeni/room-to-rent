@@ -1,12 +1,11 @@
 package com.room.to.rent.backend.auth;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.room.to.rent.backend.entity.AppUser;
+import com.room.to.rent.backend.user.AppUser;
 import com.room.to.rent.backend.security.JwtService;
 import com.room.to.rent.backend.token.Token;
 import com.room.to.rent.backend.token.TokenRepository;
 import com.room.to.rent.backend.token.TokenType;
-import com.room.to.rent.backend.user.Role;
 import com.room.to.rent.backend.user.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

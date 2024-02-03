@@ -1,4 +1,4 @@
-package com.room.to.rent.backend.security;
+package com.room.to.rent.backend.user;
 
 import com.room.to.rent.backend.token.TokenRepository;
 import jakarta.servlet.http.HttpServletRequest;

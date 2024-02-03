@@ -1,4 +1,4 @@
-package com.room.to.rent.backend.entity;
+package com.room.to.rent.backend.user;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.room.to.rent.backend.token.Token;

@@ -1,6 +1,6 @@
 package com.room.to.rent.backend.token;
 
-import com.room.to.rent.backend.entity.AppUser;
+import com.room.to.rent.backend.user.AppUser;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,6 @@
 package com.room.to.rent.backend.security;
 
-import com.room.to.rent.backend.entity.AppUser;
+import com.room.to.rent.backend.user.AppUser;
 import com.room.to.rent.backend.entity.Authority;
 import com.room.to.rent.backend.user.UserRepository;
 import org.springframework.security.authentication.AuthenticationProvider;
