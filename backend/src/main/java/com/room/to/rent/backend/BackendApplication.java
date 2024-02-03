@@ -2,7 +2,6 @@ package com.room.to.rent.backend;
 
 import com.room.to.rent.backend.auth.AuthenticationService;
 import com.room.to.rent.backend.auth.RegisterRequest;
-import com.room.to.rent.backend.user.Role;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
