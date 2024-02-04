@@ -1,8 +1,8 @@
-# **Instalation of Project dependencies**
+# **Installation of Project dependencies**
 
 To use this project first of all we need to clone the project: -https://github.com/zemeni/room-to-rent.git
 -cd room-to-rent
-Then we need to install mode package manager(NPM)
+Then we need to install node package manager(NPM)
 
 - npm install
   -npm run dev
@@ -17,7 +17,7 @@ Then we need to install mode package manager(NPM)
 -Jest
 -Storybook
 
-##Instalation process and URL of the libraries
+##Installation process and URL of the libraries
 [React](https://reactjs.org/)
 [TypeScript](https://www.typescriptlang.org)
 
