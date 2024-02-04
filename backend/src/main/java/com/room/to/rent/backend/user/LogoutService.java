@@ -1,4 +1,4 @@
-package com.room.to.rent.backend.security;
+package com.room.to.rent.backend.user;
 
 import com.room.to.rent.backend.token.TokenRepository;
 import jakarta.servlet.http.HttpServletRequest;
@@ -16,10 +16,7 @@ public class LogoutService implements LogoutHandler {
     private final TokenRepository tokenRepository;
 
     @Override
-    public void logout(
-            HttpServletRequest request,
-            HttpServletResponse response,
-            Authentication authentication) {
+    public void logout(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
 
         final String authHeader = request.getHeader("Authorization");
         final String jwt;

@@ -1,13 +1,11 @@
 package com.room.to.rent.backend.token;
 
-import com.room.to.rent.backend.entity.AppUser;
+import com.room.to.rent.backend.user.AppUser;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class Token {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
 
     @Column(unique = true)
@@ -28,7 +26,7 @@ public class Token {
 
     public boolean expired;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     public AppUser user;
 }

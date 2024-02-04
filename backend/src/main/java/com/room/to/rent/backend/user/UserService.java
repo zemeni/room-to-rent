@@ -1,6 +1,5 @@
 package com.room.to.rent.backend.user;
 
-import com.room.to.rent.backend.entity.AppUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;

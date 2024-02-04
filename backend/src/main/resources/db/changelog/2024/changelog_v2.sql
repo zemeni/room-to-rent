@@ -67,3 +67,14 @@ CREATE TABLE app_user(
                          password VARCHAR(255) NOT NULL,
                          role VARCHAR(45) NOT NULL
 );
+
+-- changeset Baburam:token
+CREATE TABLE token(
+    id SERIAL PRIMARY KEY ,
+    token VARCHAR(255) NOT NULL,
+    tokenType VARCHAR(45) NOT NULL ,
+    revoked bit,
+    expired bit,
+    user_id INT,
+    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES app_user(id)
+)
