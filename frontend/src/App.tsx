@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import { default as axios } from "axios";
 import { AxiosResponse } from "axios";
-
+import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Signup from "./pages/Signup";
+import Signin from "./pages/Signin";
+import PublicLayout from "./layouts/public/PublicLayout";
+import { Routes, Route } from "react-router-dom";
 function App() {
   const [welcome, setWelcome] = useState("");
   const [users, setUsers] = useState([]);
@@ -34,13 +39,21 @@ function App() {
 
   return (
     <>
-      <h1>{welcome}</h1>
+      {/* <h1>{welcome}</h1>
       <div>
         <h5>list of users</h5>
         {users.map((user, index) => (
           <li key={index}>{user.firstName + " " + user.lastName}</li>
         ))}
-      </div>
+      </div> */}
+      <PublicLayout />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
     </>
   );
 }
