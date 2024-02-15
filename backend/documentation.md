@@ -31,3 +31,12 @@ sudo vi /etc/environment
 JAVA_HOMe="usr/lib/jvm/jdk .../"
 
 source /etc/environment
+
+## installing maven in Ubuntu
+install the latest binary (apache-maven-3.9.6-bin.tar.gz) file from maven website
+export to any folder lets say(/opt/) using command
+tar xvzf apache-maven-3.9.6-bin.tar.gz
+add the bin path to the /etc/environment
+PATH=/opt/apache-maven-3.9.6/bin;$PATH
+source /etc/environment (refresh environment file)
+maven --version
