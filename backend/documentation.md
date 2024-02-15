@@ -39,4 +39,4 @@ tar xvzf apache-maven-3.9.6-bin.tar.gz
 add the bin path to the /etc/environment
 PATH=/opt/apache-maven-3.9.6/bin;$PATH
 source /etc/environment (refresh environment file)
-maven --version
+mvn --version
